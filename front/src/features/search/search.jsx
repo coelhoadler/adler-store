@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from '../../components/Header/Header'
 
 const SearchFeature = () => {
   return (
     <>
-        <h1>Search</h1>
+      <Header />
     </>
   )
 }
