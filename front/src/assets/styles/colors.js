@@ -3,7 +3,8 @@ export const colors = {
       background: '#fafafa'
     },
     header: {
-        background: '#fff159'
+        background: '#fff159',
+        input: '#bdbdbd'
     }
   }
   

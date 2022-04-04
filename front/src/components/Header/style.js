@@ -5,7 +5,7 @@ export const Header = styled.header`
   width: 100vw;
   background-color: ${colors.header.background};
   height: 60px;
-  padding: 0 120px;
+  padding: 0 140px;
 
   display: flex;
   align-items: center;
@@ -17,5 +17,4 @@ export const Logo = styled.a`
   width: 44px;
   height: 32px;
   text-indent: -9999px;
-  position: absolute;
 `;
