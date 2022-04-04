@@ -12,9 +12,8 @@ const ResultsFeature = () => {
   return (
     <>
         <h1>Results for {query.get('search')}</h1>
-        
     </>
   )
 }
 
-export default ResultsFeature
+export default ResultsFeature;
