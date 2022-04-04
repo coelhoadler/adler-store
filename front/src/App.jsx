@@ -28,7 +28,7 @@ const AppRoutes = () => (
     />
 
     <Route
-      path="results"
+      path="items"
       element={
         <Suspense fallback={<Loader />}>
           <ResultsFeature />
@@ -37,7 +37,7 @@ const AppRoutes = () => (
     />
 
     <Route
-      path="details"
+      path="items/:id"
       element={
         <Suspense fallback={<Loader />}>
           <DetailsFeature />
