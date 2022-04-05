@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLocation } from "react-router-dom";
+import ProductList from '../../components/ProductList/ProductList';
 
 function useQuery() {
   const { search } = useLocation();
@@ -11,7 +12,8 @@ const ResultsFeature = () => {
 
   return (
     <>
-        <h1>Results for {query.get('search')}</h1>
+      <ProductList></ProductList>
+      <h1>Results for {query.get('search')}</h1>
     </>
   )
 }
