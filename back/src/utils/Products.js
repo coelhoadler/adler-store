@@ -19,7 +19,8 @@ class Products {
       )
       .then((search) => {
         search.data.results.map((item) => {
-          this.#products.author.name = item.domain_id;
+          this.#products.author.name = item.domain_id; // TODO: no understand this key
+          this.#products.author.lastname = item.domain_id; // TODO: no understand this key
           this.#products.items.push({
             id: item.id,
             title: item.title,

@@ -1,21 +1,29 @@
-import React from 'react'
-import { useLocation } from "react-router-dom";
-import ProductList from '../../components/ProductList/ProductList';
+import React from "react";
+import axios from "axios";
+import ProductList from "../../components/ProductList/ProductList";
 
-function useQuery() {
-  const { search } = useLocation();
-  return React.useMemo(() => new URLSearchParams(search), [search]);
-}
+class ResultsFeature extends React.Component {
 
-const ResultsFeature = () => {
-  const query = useQuery();
+  state = {
+    products: [],
+  };
 
-  return (
-    <>
-      <ProductList></ProductList>
-      <h1>Results for {query.get('search')}</h1>
-    </>
-  )
+  componentDidMount() {
+    axios
+      .get(`http://localhost:3000/api/items${window.location.search}`)
+      .then((res) => {
+        const products = res.data;
+        this.setState({ products });
+      });
+  }
+
+  render() {
+    return (
+      <>
+        <ProductList products={this.state.products}></ProductList>
+      </>
+    );
+  }
 }
 
 export default ResultsFeature;

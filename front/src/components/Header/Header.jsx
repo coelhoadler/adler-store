@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <form name="formSearch" action="items">
       <S.Header>
-        <S.Logo href="//www.mercadolivre.com.br">
+        <S.Logo href="/">
           Mercado Livre Brasil - Onde comprar e vender de Tudo
         </S.Logo>
 

@@ -15,7 +15,8 @@ export const Wrapper = styled.section`
 `;
 
 export const ProductImage = styled.img`
-  min-height: 100%;
+  min-height: 150px;
+  width: 140px;
   border-radius: 5px;
   padding: 10px;
 `;
