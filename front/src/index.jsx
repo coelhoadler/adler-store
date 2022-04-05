@@ -5,10 +5,13 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { GlobalStyle } from "./assets/styles/global";
 
+import Header from "./components/Header/Header";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
+    <Header />
     <App />
     <GlobalStyle />
   </BrowserRouter>

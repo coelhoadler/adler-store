@@ -3,7 +3,6 @@ import React, { lazy, Suspense } from 'react'
 import { Navigate, Routes, Route } from 'react-router-dom'
 import Loader from 'react-loader'
 
-const SearchFeature = lazy(() => import('./features/search/search'))
 const ResultsFeature = lazy(() => import('./features/results/results'))
 const DetailsFeature = lazy(() => import('./features/details/details'))
 
@@ -13,16 +12,7 @@ const AppRoutes = () => (
       index
       element={
         <Suspense fallback={<Loader />}>
-          <SearchFeature />
-        </Suspense>
-      }
-    />
-
-    <Route
-      path="search"
-      element={
-        <Suspense fallback={<Loader />}>
-          <SearchFeature />
+          <></>
         </Suspense>
       }
     />
@@ -45,8 +35,8 @@ const AppRoutes = () => (
       }
     />
 
-    <Route path="/" element={<Navigate replace to="/search" />} />
-    <Route path="*" element={<Navigate replace to="/search" />} />
+    <Route path="/" element={<Navigate replace to="/" />} />
+    <Route path="*" element={<Navigate replace to="/" />} />
   </Routes>
 )
 
