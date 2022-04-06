@@ -7,7 +7,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/api/items", async function (req, res, next) {
-  const search = req.query.search.trim() || '';
+  const search = req.query.search.trim() || "";
 
   if (search) {
     const products = await new Products().listAll(search);
@@ -15,6 +15,12 @@ router.get("/api/items", async function (req, res, next) {
   } else {
     res.status(502).json({ error: true });
   }
+});
+
+router.get("/api/items/:id", async function (req, res, next) {
+  const productId = req.params.id || '';
+  const product = await new Products().list(productId);
+  res.status(200).json(product);
 });
 
 module.exports = router;
