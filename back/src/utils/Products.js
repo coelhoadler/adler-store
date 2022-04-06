@@ -19,7 +19,7 @@ class Products {
     item: {},
   };
 
-  constructor() {}
+  constructor() { }
 
   listAll(q) {
     return axios
