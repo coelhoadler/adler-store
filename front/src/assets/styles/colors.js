@@ -1,6 +1,6 @@
 export const colors = {
     body: {
-      background: '#fafafa'
+      background: '#ededed'
     },
     header: {
         background: '#fff159',

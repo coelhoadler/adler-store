@@ -12,7 +12,8 @@ export const LeftBlock = styled.section`
 `;
 
 export const RightBlock = styled.section`
+    flex: 0.5;
     background-color: white;
-    padding: 15px;
+    padding: 15px 45px;
 `;
 

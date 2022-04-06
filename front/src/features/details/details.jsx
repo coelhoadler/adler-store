@@ -1,7 +1,9 @@
 import React from "react";
 import axios from "axios";
-import * as S from './style';
 import ReactLoader from "react-loader";
+import ProductInfo from "../../components/ProductInfo/ProductInfo";
+import ProductDescription from "../../components/ProductDescription/ProductDescription";
+import * as S from './style';
 class DetailsFeature extends React.Component {
 
   state = {
@@ -20,16 +22,11 @@ class DetailsFeature extends React.Component {
       return (
         <S.Wrapper>
           <S.LeftBlock>
-            <img src={this.state.product.picture} />
-            <h1>Description del producto</h1>
-            <p>{this.state.product.description}</p>
+            <ProductDescription product={this.state.product} />
           </S.LeftBlock>
   
           <S.RightBlock>
-            <span>{this.state.product.condition}</span> - <span>{this.state.product.sold_quantity}</span>
-            <h1>{this.state.product.title}</h1>
-            <p>{this.state.product.price.amount}</p>
-            <button>Comprar</button>
+            <ProductInfo product={this.state.product} />
           </S.RightBlock>
         </S.Wrapper>
       );
