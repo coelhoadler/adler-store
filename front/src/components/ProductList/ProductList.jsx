@@ -1,9 +1,9 @@
 import React from "react";
+import ReactLoader from "react-loader";
 import Product from "../Product/Product";
 import * as S from "./style";
 
 const ProductList = ({ products }) => {
-  console.log("recebendo", products);
   if (products && products.items) {
     return (
       <S.List>
@@ -12,6 +12,8 @@ const ProductList = ({ products }) => {
         })}
       </S.List>
     );
+  } else {
+    return <ReactLoader />
   }
 };
 

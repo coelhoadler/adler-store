@@ -14,6 +14,10 @@ export const Wrapper = styled.section`
   min-width: 420px;
 `;
 
+export const Link = styled.a`
+  cursor: pointer;
+`;
+
 export const ProductImage = styled.img`
   min-height: 150px;
   width: 140px;
