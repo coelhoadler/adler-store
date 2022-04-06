@@ -47,3 +47,7 @@ export const StateLabel = styled.label`
   position: absolute;
   right: 40px;
 `;
+
+export const FreeShipping = styled.img`
+  margin-left: 20px;
+`;
