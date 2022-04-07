@@ -48,4 +48,3 @@ After that, just type:
   npm start
 ```
 and the development server runs on PORT :4200
-

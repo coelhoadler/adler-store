@@ -1,8 +1,8 @@
-# To prepare Front-end Project
+# To prepare Back-end Project
 
-Enter inside folder "front":
+Enter inside folder "back":
 ```
-  cd front
+  cd back
 ```
 
 Install dependencies with npm or yarn:
@@ -15,4 +15,4 @@ After that, just type:
 ```
   npm start
 ```
-and the development server runs on PORT :4200
+and the development server runs on PORT :3000
