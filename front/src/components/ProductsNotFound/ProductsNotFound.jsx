@@ -1,4 +1,3 @@
-import react from "react";
 import * as S from "./style";
 
 export const ProductsNotFound = () => {

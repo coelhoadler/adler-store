@@ -1,4 +1,3 @@
-import axios from "axios";
 import * as S from './style';
 
 export const Error = ({ error }) => {
