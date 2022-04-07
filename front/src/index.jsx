@@ -7,6 +7,7 @@ import { GlobalStyle } from "./assets/styles/global";
 
 import Header from "./components/Header/Header";
 
+localStorage.clear();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(

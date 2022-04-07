@@ -25,7 +25,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-    background-image: url("search.svg");
+    background-image: url("../search.svg");
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;

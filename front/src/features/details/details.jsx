@@ -4,6 +4,7 @@ import ReactLoader from "react-loader";
 import ProductInfo from "../../components/ProductInfo/ProductInfo";
 import ProductDescription from "../../components/ProductDescription/ProductDescription";
 import * as S from './style';
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 class DetailsFeature extends React.Component {
 
   state = {
@@ -21,15 +22,18 @@ class DetailsFeature extends React.Component {
   render() {
     if (Object.entries(this.state.product).length) {
       return (
-        <S.Wrapper>
-          <S.LeftBlock>
-            <ProductDescription product={this.state.product} />
-          </S.LeftBlock>
-  
-          <S.RightBlock>
-            <ProductInfo product={this.state.product} />
-          </S.RightBlock>
-        </S.Wrapper>
+        <>
+          <Breadcrumb />
+          <S.Wrapper>
+            <S.LeftBlock>
+              <ProductDescription product={this.state.product} />
+            </S.LeftBlock>
+    
+            <S.RightBlock>
+              <ProductInfo product={this.state.product} />
+            </S.RightBlock>
+          </S.Wrapper>
+        </>
       );
     } else {
       return (

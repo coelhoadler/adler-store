@@ -8,7 +8,7 @@ const ProductList = ({ products }) => {
   if (products && products.items) {
     return (
       <>
-        <Breadcrumb categories={products.categories} />
+        <Breadcrumb />
         <S.List>
           {products.items.map((product) => {
             return <Product key={product.id} product={product} />;

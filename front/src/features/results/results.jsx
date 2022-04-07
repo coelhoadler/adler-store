@@ -14,6 +14,7 @@ class ResultsFeature extends React.Component {
       .then((res) => {
         const products = res.data;
         this.setState({ products });
+        localStorage.setItem('products', JSON.stringify(products));
       });
   }
 

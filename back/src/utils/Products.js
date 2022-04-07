@@ -7,7 +7,7 @@ class Products {
       name: "",
       lastname: "",
     },
-    categories: ["Eletronica", "Informatica", "Games", "Celulares"], // TODO: get categories from JSON
+    categories: [],
     items: [],
   };
 
@@ -44,23 +44,11 @@ class Products {
           });
         });
 
-        // const filters = search.data.filters;
-        // const arr = filters.values();
-        // const eArr = arr[Symbol.iterator]();
+        const filters = search.data.filters;
+        const arr = filters.values();
+        const eArr = arr[Symbol.iterator]().next();
+        this.#products.categories = eArr.value.values[0].path_from_root
 
-        // console.log('aqui: ', eArr.next().value.values.path_from_root)
-        // arr.forEach(obj => {
-        //   console.log(obj)
-        //   // JSON.parse(obj)
-        // })
-        // console.log(filters.values(), JSON.stringify(filters.values()))
-        // filters.map(element => {
-        //   console.log(element)
-        // });
-
-        // obj.categories = item.filters.values.path_from_root.reduce((acc, curr) => {
-        //   acc.push('sss')
-        // }, []);
         return this.#products;
       });
   }
