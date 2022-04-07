@@ -1,4 +1,4 @@
-const axios = require("axios");
+const axios = require("../config/axios");
 
 class Products {
 
@@ -24,7 +24,7 @@ class Products {
   listAll(q) {
     return axios
       .get(
-        `https://api.mercadolibre.com/sites/MLA/search?q=${q}&offset=1&limit=4`
+        `sites/MLA/search?q=${q}&offset=1&limit=4`
       )
       .then((search) => {
         search.data.results.map((item) => {
@@ -54,8 +54,8 @@ class Products {
   }
 
   list(productId) {
-    const reqProductUrl = axios.get(`https://api.mercadolibre.com/items/${productId}`);
-    const reqDescriptioUrl = axios.get(`https://api.mercadolibre.com/items/${productId}/description`);
+    const reqProductUrl = axios.get(`items/${productId}`);
+    const reqDescriptioUrl = axios.get(`items/${productId}/description`);
 
     return axios
       .all([reqProductUrl, reqDescriptioUrl])
