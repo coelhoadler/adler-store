@@ -7,7 +7,12 @@ const Product = ({ product }) => {
   const navigate = useNavigate();
 
   return (
-    <S.Link onClick={() => navigate(`/items/${product.id}`)}>
+    <S.Link
+      onClick={() => {
+        localStorage.setItem("productId", product.id);
+        navigate(`/items/${product.id}`);
+      }}
+    >
       <S.Wrapper>
         <S.ProductImage src={product.picture} alt={product.title} />
         <S.Info>

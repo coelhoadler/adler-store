@@ -7,9 +7,6 @@ export const Wrapper = styled.section`
   display: flex;
   background-color: white;
   border-top: 1px solid #e6e6e6;
-  &:first-child {
-    border-top: none;
-  }
 
   min-width: 420px;
 `;

@@ -12,7 +12,7 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.a`
-  background-image: url("logo__small.png");
+  background-image: url("../logo__small.png");
   background-repeat: no-repeat;
   width: 44px;
   height: 32px;

@@ -11,7 +11,8 @@ class DetailsFeature extends React.Component {
   };
 
   componentDidMount() {
-    axios.get(`http://localhost:3000/api/items/MLA1115590875`).then((res) => { // TODO: get right product ID
+    const currentProductId = localStorage.getItem("productId") || '';
+    axios.get(`http://localhost:3000/api/items/${currentProductId}`).then((res) => {
       const product = res.data.item;
       this.setState({ product });
     });
@@ -36,6 +37,7 @@ class DetailsFeature extends React.Component {
       )
     }
   }
+
 }
 
 export default DetailsFeature;
