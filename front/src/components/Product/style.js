@@ -15,11 +15,17 @@ export const Link = styled.a`
   cursor: pointer;
 `;
 
+export const ImageContainer = styled.div`
+  width: 190px;
+  position: relative;
+`;
+
 export const ProductImage = styled.img`
   min-height: 150px;
-  width: 140px;
+
   border-radius: 5px;
   padding: 10px;
+  width: 100%;
 `;
 
 export const Info = styled.div`

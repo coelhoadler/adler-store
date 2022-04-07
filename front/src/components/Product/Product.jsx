@@ -14,7 +14,9 @@ const Product = ({ product }) => {
       }}
     >
       <S.Wrapper>
-        <S.ProductImage src={product.picture} alt={product.title} />
+        <S.ImageContainer>
+          <S.ProductImage src={product.picture} alt={product.title} />
+        </S.ImageContainer>
         <S.Info>
           <S.PriceLabel>
             {formatToARS(product.price.amount)}
