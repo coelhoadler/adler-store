@@ -2,6 +2,7 @@ import React from "react";
 import ReactLoader from "react-loader";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import Product from "../Product/Product";
+import ProductsNotFound from "../ProductsNotFound/ProductsNotFound";
 import * as S from "./style";
 
 const ProductList = ({ products }) => {
@@ -17,7 +18,11 @@ const ProductList = ({ products }) => {
       </>
     );
   } else {
-    return <ReactLoader />
+    if (products && products.length === 0) {
+      return <ProductsNotFound />
+    } else {
+      return <ReactLoader />
+    }
   }
 };
 
